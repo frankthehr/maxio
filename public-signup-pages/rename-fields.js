@@ -50,24 +50,24 @@ $('.form__section--billing-address h3').html("Adresse de facturation");
 $('.form__section--billing-address header label:first').contents().last().replaceWith("Utiliser l'adresse de livraison");
 $('.form__section--billing-address header label:last').contents().last().replaceWith("Utiliser une autre adresse de facturation");
 
-$('label[for="subscription_payment_profile_attributes_billing_address"]').html("BILLING ADDRESS 1 *");
-$('label[for="subscription_payment_profile_attributes_billing_address_2"]').html("BILLING ADDRESS 2");
-$('label[for="subscription_payment_profile_attributes_billing_city"]').html("CITY *");
-$('label[for="subscription_payment_profile_attributes_billing_country"]').html("COUNTRY *");
-$('#subscription_payment_profile_attributes_billing_country').find('option').html("COUNTRY");
-$('label[for="subscription_payment_profile_attributes_billing_state"]').html("STATE *");
-$('#subscription_payment_profile_attributes_billing_state').find('option').html("STATE");
-$('label[for="subscription_payment_profile_attributes_billing_zip"]').html("ZIP CODE");
+$('label[for="subscription_payment_profile_attributes_billing_address"]').html("Adresse de facturation 1 *");
+$('label[for="subscription_payment_profile_attributes_billing_address_2"]').html("Adresse de facturation 2");
+$('label[for="subscription_payment_profile_attributes_billing_city"]').html("Ville *");
+$('label[for="subscription_payment_profile_attributes_billing_country"]').html("Pays *");
+$('#subscription_payment_profile_attributes_billing_country').find('option').html("Pays");
+$('label[for="subscription_payment_profile_attributes_billing_state"]').html("Département *");
+$('#subscription_payment_profile_attributes_billing_state').find('option').html("Département");
+$('label[for="subscription_payment_profile_attributes_billing_zip"]').html("Code Postal");
 
 // ADDITIONAL INFORMATION
-$('.form__section--additional-information h3').html("ADDITIONAL INFORMATION");
+$('.form__section--additional-information h3').html("Informations supplémentaires");
 
 // TERMS
 $('.form__section--terms-submit label').contents().slice(3).remove();
-$('.form__section--terms-submit label').append('I ACCEPT THE <a href="" target="_blank">TERMS AND CONDITIONS</a>');
+$('.form__section--terms-submit label').append(`J'accepte les <a href="" target="_blank">termes et conditions</a>`);
 
 // SUBMIT
-$('#subscription_submit').html("PLACE MY ORDER");
+$('#subscription_submit').html("Placer ma commande");
 
 // PLAN SUMMARY
-$('.content__secondary .content__heading h2').html("PLAN SUMMARY");
+$('.content__secondary .content__heading h2').html("Résumé du plan");
