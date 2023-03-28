@@ -16,6 +16,37 @@ $('#vat_button').html("Valider la TVA");
 $('#vat_button').data("loading-text", "<i class='fa fa-refresh fa-spin fa-fw'></i> Validation...");
 $('#vat_button').data("button-text", "Valider la TVA");
 
+// CREDIT / DEBIT
+$('#subscription_payment_profile_attributes_payment_method_credit_card').closest('label')
+  // get all child nodes including text and comment
+  .contents()
+  // iterate and filter out elements
+  .filter(function() {
+    // check node is text and non-empty
+    return this.nodeType === 3 && this.textContent.trim().length;
+    // replace it with new text
+  }).replaceWith(' Carte de crédit ');
+
+$('#subscription_payment_profile_attributes_payment_method_direct_debit').closest('label')
+  // get all child nodes including text and comment
+  .contents()
+  // iterate and filter out elements
+  .filter(function() {
+    // check node is text and non-empty
+    return this.nodeType === 3 && this.textContent.trim().length;
+    // replace it with new text
+  }).replaceWith(' Prélèvement automatique ');
+
+// DIRECT DEBIT PAYMENT INFORMATION
+subscription_payment_profile_attributes_bank_name
+$('label[for="subscription_payment_profile_attributes_bank_name"]').html("Nom de la banque *"); 
+$('label[for="subscription_payment_profile_attributes_bank_branch_code"]').html("Code de tri *"); 
+$('label[for="subscription_payment_profile_attributes_bank_account_number"]').html("Numéro de compte *"); 
+$('.show-local-details-text').html("ou entrez les détails locaux");
+$('.show-iban-text').html("ou entrez IBAN");
+
+
+
 // CUSTOMER INFORMATION
 $('.form__section--customer-information h3').html("Information du client");
 $('label[for="subscription_customer_attributes_first_name"]').html("Prénom *"); 
@@ -28,7 +59,7 @@ $('label[for="subscription_customer_attributes_address"]').html("Adresse 1 *");
 $('label[for="subscription_customer_attributes_address_2"]').html("Adresse 2"); 
 $('label[for="subscription_customer_attributes_city"]').html("Ville *"); 
 $('label[for="subscription_customer_attributes_country"]').html("Pays *"); 
-$('#subscription_customer_attributes_country').find('option').html("Pays"); 
+// $('#subscription_customer_attributes_country').find('option').html("Pays"); 
 $('label[for="subscription_customer_attributes_state"]').html("Département *"); 
 $('#subscription_customer_attributes_state').find('option').html("Département"); 
 $('label[for="subscription_customer_attributes_zip"]').html("Code postal"); 
@@ -54,7 +85,7 @@ $('label[for="subscription_payment_profile_attributes_billing_address"]').html("
 $('label[for="subscription_payment_profile_attributes_billing_address_2"]').html("Adresse de facturation 2");
 $('label[for="subscription_payment_profile_attributes_billing_city"]').html("Ville *");
 $('label[for="subscription_payment_profile_attributes_billing_country"]').html("Pays *");
-$('#subscription_payment_profile_attributes_billing_country').find('option').html("Pays");
+// $('#subscription_payment_profile_attributes_billing_country').find('option').html("Pays");
 $('label[for="subscription_payment_profile_attributes_billing_state"]').html("Département *");
 $('#subscription_payment_profile_attributes_billing_state').find('option').html("Département");
 $('label[for="subscription_payment_profile_attributes_billing_zip"]').html("Code Postal");
