@@ -38,13 +38,15 @@ $('#subscription_payment_profile_attributes_payment_method_direct_debit').closes
   }).replaceWith(' Prélèvement automatique ');
 
 // DIRECT DEBIT PAYMENT INFORMATION
-subscription_payment_profile_attributes_bank_name
 $('label[for="subscription_payment_profile_attributes_bank_name"]').html("Nom de la banque *"); 
-$('label[for="subscription_payment_profile_attributes_bank_branch_code"]').html("Code de tri *"); 
+$('label[for="subscription_payment_profile_attributes_bank_branch_code"]').text("Code de tri *"); 
 $('label[for="subscription_payment_profile_attributes_bank_account_number"]').html("Numéro de compte *"); 
+
+$('label[for="subscription_payment_profile_attributes_bank_account_holder_type"]').html("Est-ce un compte professionnel ou un compte personnel ?"); 
+$('label[for="subscription_payment_profile_attributes_bank_account_holder_type_personal"]').html("Compte personnel "); 
+$('label[for="subscription_payment_profile_attributes_bank_account_holder_type_business"]').html("Compte professionnel "); 
 $('.show-local-details-text').html("ou entrez les détails locaux");
 $('.show-iban-text').html("ou entrez IBAN");
-
 
 
 // CUSTOMER INFORMATION
