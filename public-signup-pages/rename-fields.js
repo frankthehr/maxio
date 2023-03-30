@@ -15,6 +15,7 @@ $('.form__section--vat-information h3').html("Informations sur la TVA");
 $('#vat_button').html("Valider la TVA");
 $('#vat_button').data("loading-text", "<i class='fa fa-refresh fa-spin fa-fw'></i> Validation...");
 $('#vat_button').data("button-text", "Valider la TVA");
+$('.form__section--vat-information p').html("Les résidents de l'UE, en dehors de la France, peuvent indiquer leur numéro de TVA pour être exonérés de la taxe. Veuillez saisir votre numéro de TVA sans le code pays");
 
 // CREDIT / DEBIT
 $('#subscription_payment_profile_attributes_payment_method_credit_card').closest('label')
@@ -50,7 +51,10 @@ $('.show-iban-text').html("ou entrez IBAN");
 
 
 // CUSTOMER INFORMATION
-$('.form__section--customer-information h3').html("Information du client");
+// Mistake in Maxio code - There are two h3's nested in this element: "Payment Method" & "Customer Information". Unsure if the first one (Payment Method) is always used so solution is to set all H3's to Payment Method translation and then select the last H3 (which will be Customer Information either way) and make it the Customer Information translation
+$('.form__section--customer-information h3').html("Mode de paiement");
+$('.form__section--customer-information h3:last-of-type').html("Information du client");
+
 $('label[for="subscription_customer_attributes_first_name"]').html("Prénom *"); 
 $('label[for="subscription_customer_attributes_last_name"]').html("Nom *"); 
 $('label[for="subscription_customer_attributes_email"]').html("Adresse email *"); 
@@ -61,7 +65,7 @@ $('label[for="subscription_customer_attributes_address"]').html("Adresse 1 *");
 $('label[for="subscription_customer_attributes_address_2"]').html("Adresse 2"); 
 $('label[for="subscription_customer_attributes_city"]').html("Ville *"); 
 $('label[for="subscription_customer_attributes_country"]').html("Pays *"); 
-// $('#subscription_customer_attributes_country').find('option').html("Pays"); 
+
 $('label[for="subscription_customer_attributes_state"]').html("Département *"); 
 $('#subscription_customer_attributes_state').find('option').html("Département"); 
 $('label[for="subscription_customer_attributes_zip"]').html("Code postal"); 
