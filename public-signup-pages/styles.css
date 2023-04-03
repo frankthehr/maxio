@@ -1,0 +1,53 @@
+/* Colours */
+/* Orange: #e9a825; */
+/* Purple: #35066e; */
+
+.form__button--primary {
+  border-radius: 4px;
+  border: solid 2px #e9a825;
+  background-color: #e9a825;
+  color: white;
+}
+
+.form__button--primary:hover,
+.form__button--primary:focus,
+.form__button--primary:active {
+  border-radius: 4px;
+  border: solid 2px #35066e;
+  background-color: #35066e;
+  color: white;
+}
+
+.form__button--primary:focus-visible {
+  outline: #35066e;
+}
+
+.form__button--primary:disabled,
+.form__button--is-submitting {
+  background-image: none;
+  background-color: white;
+  color: #e9a825;
+  border: solid 2px #e9a825;
+}
+
+/* Receipt Page */
+.plan__summary-total,
+.content__heading-section--total,
+.success-receipt__icon .fa-check,
+.success-receipt__total dl:last-of-type{
+  color: #e9a825;
+}
+
+/* Self-service Page */
+#subscription_submit {
+  border-radius: 4px;
+  background-image:none;
+  border: solid 2px #e9a825;
+  background-color: #e9a825;
+  color: white;
+}
+
+#subscription_submit:hover {
+  background-color: #35066e;
+  border: solid 2px #35066e;
+}
