@@ -82,6 +82,9 @@ $('label[for="subscription_payment_profile_attributes_cvv"]').html("CVV");
 $('label[for="subscription_payment_profile_attributes_expiration_month"]').html("Mois d'expiration *");
 $('label[for="subscription_payment_profile_attributes_expiration_year"]').html("Année d'expiration *");
 
+// SHIPPING INFORMATION
+$('.form__section--shipping-information h3').html("Informations sur l'expédition");
+
 // BILLING ADDRESS
 $('.form__section--billing-address h3').html("Adresse de facturation");
 $('.form__section--billing-address header label:first').contents().last().replaceWith("Utiliser l'adresse de livraison");
@@ -108,3 +111,34 @@ $('#subscription_submit').html("Placer ma commande");
 
 // PLAN SUMMARY
 $('.content__secondary .content__heading h2').html("Résumé du plan");
+
+// CAPTCHA
+// function changeCaptchaText(newText) {
+//   const recaptchaLabel = document.getElementById('recaptcha-anchor-label');
+//   console.log(recaptchaLabel);
+//   const childNodes = recaptchaLabel.childNodes;
+//   childNodes[1].textContent = newText;
+// }
+
+// setTimeout(() => {
+//   changeCaptchaText('Je ne suis pas un robot');
+// }, 1000);
+
+
+// FOOTER
+function changeFooterText(newText, newInfoText, newPrivacyText) {
+  const footerLink = document.querySelector('.footer__operated-by-link');
+  const childNodes = footerLink.childNodes;
+
+  childNodes[0].textContent = newText;
+  childNodes[1].textContent = newInfoText;
+  childNodes[3].textContent = newPrivacyText;
+}
+
+const footerTranslation = "Cette page est hébergée par Chargify au nom de B2E Limited, ";
+
+const footerInfoTranslation = "Voir plus d'informations.";
+
+const footerPrivacyTranslation = "Politique de confidentialité";
+
+changeFooterText(footerTranslation, footerInfoTranslation, footerPrivacyTranslation);
