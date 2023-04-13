@@ -7,6 +7,7 @@
   border: solid 2px #e9a825;
   background-color: #e9a825;
   color: white;
+  transition: all ease-in-out 250ms;
 }
 
 .form__button--primary:hover,
@@ -16,10 +17,12 @@
   border: solid 2px #35066e;
   background-color: #35066e;
   color: white;
+  transition: all ease-in-out 250ms;
 }
 
 .form__button--primary:focus-visible {
   outline: #35066e;
+  transition: all ease-in-out 250ms;
 }
 
 .form__button--primary:disabled,
@@ -28,6 +31,7 @@
   background-color: white;
   color: #e9a825;
   border: solid 2px #e9a825;
+  transition: all ease-in-out 250ms;
 }
 
 /* Receipt Page */
@@ -36,6 +40,7 @@
 .success-receipt__icon .fa-check,
 .success-receipt__total dl:last-of-type{
   color: #e9a825;
+  transition: all ease-in-out 250ms;
 }
 
 /* Self-service Page */
@@ -45,9 +50,11 @@
   border: solid 2px #e9a825;
   background-color: #e9a825;
   color: white;
+  transition: all ease-in-out 250ms;
 }
 
 #subscription_submit:hover {
   background-color: #35066e;
   border: solid 2px #35066e;
+  transition: all ease-in-out 250ms;
 }
